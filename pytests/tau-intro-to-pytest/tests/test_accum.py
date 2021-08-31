@@ -1,15 +1,18 @@
 import pytest
 from stuff.accum import Accumulator
 
-# add fixture to reduce repetitive code accum()
+# moved to conftest.py 
+'''
 @pytest.fixture
 def accum():
     return Accumulator()
+'''
 
 # method verifies new instance of accumulator clas has starting count of zero
-def test_accumulator_init(accum):
-    assert accum.count == 0
 
+'''def test_accumulator_init(accum):
+    assert accum.count == 0
+'''
 # method verifies that add() adds one to the internal count when call w/ no args
 def test_accumulator_add_one(accum):
     accum.add()
